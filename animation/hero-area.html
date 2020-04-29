@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Classy Hero Area Project</title>
+    <style type="text/css">
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: sans-serif;
+        position: relative;
+      }
+
+      @keyframes bg {
+        0%,
+        100% {
+          background-color: rgba(0, 0, 0, 0.2);
+        }
+        25% {
+          background-color: rgba(255, 0, 0, 0.2);
+        }
+        50% {
+          background-color: rgba(0, 255, 0, 0.2);
+        }
+        75% {
+          background-color: rgba(0, 0, 255, 0.2);
+        }
+      }
+
+      .slider {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background-color: #111;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        animation: bg 4s linear infinite;
+        overflow: hidden;
+      }
+      .slider-container h1 {
+        font-size: 64px;
+        text-shadow: 0 0 5px #fff;
+      }
+      .desc {
+        margin: 30px 0;
+      }
+      .cta {
+        padding: 10px 120px;
+        display: inline-block;
+        font-size: 24px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        box-shadow: 0 0 10px #fff;
+      }
+      .cta:hover {
+        background-color: rgb(38, 115, 238);
+        box-shadow: 0 0 10px rgb(38, 115, 238), 0 0 20px rgb(38, 115, 238),
+          0 0 40px rgb(38, 115, 238);
+        color: #fff;
+      }
+
+      .slider video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slider">
+      <video muted autoplay loop>
+        <source src="../videos/anim.mp4" type="video/mp4" />
+      </video>
+      <div class="slider-container">
+        <h1>We are Web Developer</h1>
+        <p class="desc">
+          We just love to develop website and while doing that we need some
+          coffee
+        </p>
+        <div class="cta">Contact us</div>
+      </div>
+    </div>
+  </body>
+</html>
